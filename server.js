@@ -19,10 +19,12 @@ app.get("/", function(req, res) {
 
 app.get("/new/*", function(req, res) {
     var answer = {};
-    var longUrl = req.path.slice(5);
+    var longUrl = req.url.slice(5);
     var shortUrl = '';
     if (validUrl.isUri(longUrl)){
         answer.long_url = longUrl;
+        //console.log(req.url);
+        //console.log(req.path);
         Url.findOne({long_url: longUrl}, function (err, doc){
             if(err) return err;
             if (doc){
