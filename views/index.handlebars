@@ -1,1 +1,33 @@
-<h1>TEST</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>URL Shortener Microservice</title>
+    <style>
+        p {
+            color: red;
+            background: #F1F3F4;
+            display: inline-block;
+            clear: both;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>URL Shortener Microservice</h1>
+    <h3>User stories:</h3>
+    <ul>
+        <li><h3>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</h3></li>
+        <li><h3>When I visit that shortened URL, it will redirect me to my original link.</h3></li> 
+    </ul>
+    
+    <h2>Example creation usage:</h2>
+    <p>https://ens0-url-shortener.herokuapp.com/new/https://www.google.com</p><br>
+    <p>https://ens0-url-shortener.herokuapp.com/new/http://foo.com:80</p>
+    <h2>Example creation output</h2>
+    <p>{ "original_url":"https://www.google.com", "short_url":"https://ens0-url-shortener.herokuapp.com/new/5" }</p>
+    <h2>Usage:</h2>
+    <p>https://ens0-url-shortener.herokuapp.com/5</p>
+    <h2>Will redirect to:</h2>
+    <p>https://www.google.com/</p>
+  </body>
+</html>
