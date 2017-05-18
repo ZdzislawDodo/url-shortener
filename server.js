@@ -11,15 +11,14 @@ var handlebars = require('express-handlebars').create({ defaultLayout: null });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-mongoose.connect("mongodb://localhost/url_shortener");
-
-var answer = {};
+mongoose.connect("mongodb://ens0:23Stratoir2501@ds143151.mlab.com:43151/url_shortener");
 
 app.get("/", function(req, res) {
     res.render("index");
 });
 
 app.get("/new/*", function(req, res) {
+    var answer = {};
     var longUrl = req.path.slice(5);
     var shortUrl = '';
     if (validUrl.isUri(longUrl)){
