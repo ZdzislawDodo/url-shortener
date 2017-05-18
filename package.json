@@ -1,0 +1,28 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZdzislawDodo/url-shortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZdzislawDodo/url-shortener/issues"
+  },
+  "homepage": "https://github.com/ZdzislawDodo/url-shortener#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.8",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.8",
+    "valid-url": "^1.0.9"
+  }
+}
